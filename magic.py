@@ -19,11 +19,11 @@ def magic(string1, string2):
 	if string1_len > string2_len : 
 		for i in range(26):
 			if (string2_hash[i] != 0) and (string2_hash[i] > string1_hash[i]):
-				mismatch += 1
+				mismatch += string2_hash[i] - string1_hash[i]
 	else:
 		for i in range(26):
 			if (string1_hash[i] != 0) and (string1_hash[i] > string2_hash[i]):
-				mismatch += 1
+				mismatch += string1_hash[i] - string2_hash[i]
     
     # Returning the values based on the mismatches
 	if(mismatch == 0):
